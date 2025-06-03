@@ -1,5 +1,7 @@
 package com.faleite.estruturadados.vetor;
 
+import java.util.Arrays;
+
 public class Vetor {
     private String[] elementos;
     private int tamanho;
@@ -36,4 +38,39 @@ public class Vetor {
         }
         return false;
     }
+
+    public String busca(int posicao){
+        if (!(posicao >= 0 && posicao < this.tamanho)){
+            throw new IllegalArgumentException("Posição inválida");
+        }
+        return this.elementos[posicao];
+    }
+
+    public int tamanho() {
+         return this.tamanho;
+    }
+
+    @Override
+    public String toString() {
+
+        StringBuilder s = new StringBuilder();
+        s.append("{");
+        for (int i = 0; i < this.tamanho -1; i++) {
+            s.append(elementos[i] + ", ");
+        }
+        if (this.tamanho > 0) {
+            s.append(elementos[this.tamanho -1]);
+        }
+        s.append("}");
+
+        return s.toString();
+    }
+
+    /*@Override
+    public String toString() {
+        return "Vetor{" +
+                "elementos=" + Arrays.toString(elementos) +
+                ", tamanho=" + tamanho +
+                '}';
+    }*/
 }
