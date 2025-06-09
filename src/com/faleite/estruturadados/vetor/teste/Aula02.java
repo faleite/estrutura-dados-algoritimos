@@ -14,8 +14,8 @@ public class Aula02 {
             e.printStackTrace();
         }*/
 
-        vetor.adicionar("Elemento 1");
-        vetor.adicionar("Elemento 2");
-        vetor.adicionar("Elemento 3");
+        vetor.adiciona("Elemento 1");
+        vetor.adiciona("Elemento 2");
+        vetor.adiciona("Elemento 3");
     }
 }
