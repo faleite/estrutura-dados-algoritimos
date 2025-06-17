@@ -86,6 +86,21 @@ public class Lista<T> {
         return this.elementos[posicao];
     }
 
+        /*public boolean contem(T elemento){
+
+        for (int i = 0; i < this.elementos.length; i++){
+            if (this.elementos[i].equals(elemento)){
+                return true;
+            }
+        }
+        return false;
+    }*/
+
+    public boolean contem(T elemento){
+
+        return busca(elemento) > -1;
+    }
+
     public int busca(T elemento){
 
         for (int i = 0; i < this.tamanho; i++) {
@@ -93,7 +108,6 @@ public class Lista<T> {
                 return i;
             }
         }
-
         return -1;
     }
 
@@ -118,6 +132,29 @@ public class Lista<T> {
             this.elementos[i] = this.elementos[i + 1];
         }
         this.tamanho--;
+    }
+
+
+/*    public int ultimoIndice(T elemento){
+
+        int index = -1;
+        for (int i = 0; i < this.elementos.length; i++){
+            if (this.elementos[i].equals(elemento)){
+                index = i;
+            }
+        }
+        return index;
+    }*/
+
+    // Melhor forma é olhar de tras para frente
+    public int ultimoIndice(T elemento){
+
+        for (int i = this.elementos.length - 1; i >= 0; i--){
+            if (this.elementos[i].equals(elemento)){
+                return i;
+            }
+        }
+        return -1;
     }
 
     @Override

@@ -1,5 +1,7 @@
 package com.faleite.estruturadados.vetor.teste;
 
+import com.faleite.estruturadados.vetor.Lista;
+
 import java.util.ArrayList;
 
 public class Aula12 {
