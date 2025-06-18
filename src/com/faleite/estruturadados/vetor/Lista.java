@@ -77,13 +77,18 @@ public class Lista<T> {
 
     }
 
-    public Object busca(int posicao){
+    public T busca(int posicao){
 
         if (!(posicao >= 0 && posicao < this.tamanho)){
             throw new IllegalArgumentException("Posição inválida");
         }
 
         return this.elementos[posicao];
+    }
+
+    public T obtem(int posicao){
+
+        return this.busca(posicao);
     }
 
         /*public boolean contem(T elemento){
@@ -134,6 +139,16 @@ public class Lista<T> {
         this.tamanho--;
     }
 
+    public boolean remove(T elemento) {
+
+        int elemIndex = busca(elemento);
+        if (elemIndex > -1) {
+            this.remove(elemIndex);
+            return true;
+        }
+        return false;
+    }
+
 
 /*    public int ultimoIndice(T elemento){
 
@@ -155,6 +170,21 @@ public class Lista<T> {
             }
         }
         return -1;
+    }
+
+    public void limpar() {
+
+        // Opção 01
+        // this.elementos = (T[]) new Object[this.elementos.length];
+
+        // Opção 02
+        // this.tamanho = 0;
+
+        // Opção 03
+        for (int i = 0; i < this.elementos.length; i++){
+            this.elementos[i] = null;
+        }
+        this.tamanho = 0;
     }
 
     @Override
