@@ -2,9 +2,7 @@ package com.faleite.estruturadados.pilha.labs;
 
 import com.faleite.estruturadados.pilha.Pilha;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
-import java.util.Stack;
 
 public class Exer01 {
 
