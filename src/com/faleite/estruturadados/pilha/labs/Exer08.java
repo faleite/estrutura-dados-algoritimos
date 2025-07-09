@@ -30,7 +30,3 @@ public class Exer08 {
         torreHanoi(numDiscos, original, aux, dest);
     }
 }
-
-/*
-
-* */

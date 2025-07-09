@@ -12,7 +12,6 @@ public class Exer01 {
 
         Lista<String> lista = new Lista<String>(2);
 
-
         lista.adiciona("A");
         lista.adiciona("B");
         lista.adiciona("C");
