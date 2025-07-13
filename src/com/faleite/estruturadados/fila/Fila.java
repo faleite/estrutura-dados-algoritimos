@@ -12,7 +12,7 @@ public class Fila<T> extends EstruturaEstatica<T> {
         super(capacidade);
     }
 
-    public boolean enfileira(T elemento){
+    public void enfileira(T elemento){
         /*
         this.elementos[this.tamanho] = elemento;
         this.tamanho++;
@@ -21,8 +21,6 @@ public class Fila<T> extends EstruturaEstatica<T> {
         // this.elementos[this.tamanho++] = elemento;
 
         this.adiciona(elemento);
-
-        return true;
     }
 
     public T espiar(){
